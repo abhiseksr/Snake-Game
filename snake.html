@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width,initial-scale=1.0'>
+    <link href="https://fonts.googleapis.com/css2?family=Questrial&family=Roboto:wght@100;300;400;700&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="snake.css">
+    <title>Snake Game</title>
+</head>
+
+<body>
+
+    <div class="containers">
+        <div class="instructions">
+            <header class="top">Instructions</header>
+            <ul class="notes">
+                <li class="points">Use arrow buttons for movements.</li>
+                <ul>
+                    <li>&larr; Left </li>
+                    <li>&rarr; Right</li>
+                    <li>&uarr; Up</li>
+                    <li>&darr; Down</li>
+                </ul>
+                <li class="points">Press down the following buttons to see
+                    corresponding effect.</li>
+                <ul>
+                    <li>S - Start again</li>
+                    <li>P - Pause</li>
+                    <li>R - Resume</li>
+                </ul>
+                <li class="points">You do not need to fill all the fields in the settings. Fill only those which you want to change.</li>
+                <li class="points">Best of Luck!</li>
+            </ul>
+        </div>
+        <div class="scores">
+            <div class="score">Score <span class="score-num">0</span></div>
+            <div class="high-score score">High score <span class="hscore">0</span></div>
+            <div class="score times">Times played <span class="times-played">0</span></div>
+        </div>
+        <div class="board"></div>
+        <form action="#" name="controls-setting" class="controls-setting">
+            <header class="top setting-head">Settings</header>
+            <div class="control-instruction">Enter any key of your preference in the fields. Do not forget to submit.
+            </div>
+            <div class="up align">
+                <label for="up">Up</label>
+                <input type="text" id="up">
+            </div>
+            <div class="start align">
+                <label for="start">Start again</label>
+                <input type="text" id="start">
+            </div>
+            <div class="down align">
+                <label for="down">Down</label>
+                <input type="text" id="down">
+            </div>
+            <div class="pause align">
+                <label for="pause">Pause</label>
+                <input type="text" id="pause">
+            </div>
+            <div class="left align">
+                <label for="left">Left</label>
+                <input type="text" id="left">
+            </div>
+            <div class="resume align">
+                <label for="resume">Resume</label>
+                <input type="text" id="resume">
+            </div>
+            <div class="right align">
+                <label for="right">Right</label>
+                <input type="text" id="right">
+            </div>
+            <div class="control-instruction2">Choose speed</div>
+            <div class="speeds align">
+                <label for="speeds">Speed</label>
+                <input type="range" id="speeds" min="1" max="13" value="8" step="3">
+            </div>
+            <div class="control-instruction3">Choose difficulty level</div>
+            <select name="menu" id="menu" class="menu">
+                <option value="hard">Hard - Obstacles added</option>
+                <option value="medium">Medium - Snake cannot touch itself</option>
+                <option value="easy">Easy - Snake may touch itself</option>
+            </select>
+            <button type="button" class="btn btn-outline-primary" id="submit">Submit</button>
+        </form>
+    </div>
+    <script src="snake.js"></script>
+</body>
+
+</html>
